@@ -1,13 +1,16 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(title= 'Mi aplicación con FastAPI')
 
-@app.get("/")
+# Esta api esta alojada en 
+# https://steam-recommendations-api.onrender.com
+
+
+@app.get("/")# main
 def read_root():
     return {"message": "Welcome to steam recommendations api!"}
 
-# Agrega aquí tus rutas y funciones de FastAPI
-# Por ejemplo:
+# ejemplo
 @app.get("/data")
 def get_data():
     # Aquí puedes cargar los datos procesados y devolverlos como respuesta JSON
